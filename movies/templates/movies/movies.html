@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Movies</title>
 </head>
 <body>
-$END$
+    <h1>Movies</h1>
+    <ul>
+        {% for movie in movies %}
+        <li>
+            <a href={{movie.id}}>{{movie.title}} from {{movie.year}}</a>
+
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/movies/add">Add a movie</a>
 </body>
 </html>
